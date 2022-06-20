@@ -1,4 +1,5 @@
 import React, { useState,useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
 export const Timer = () => {
     const [timer,setTimer]=useState(0);
@@ -27,10 +28,15 @@ export const Timer = () => {
     
 
   return (
-    <div style={{display:"flex", flexDirection:"column",maxWidth:"70%"}}>
-      <input type="number" placeholder='Enter seconds' onChange={(e)=>(setdata(e.target.value))} />
+    <div style={{ display: "flex", flexDirection: "column", maxWidth: "100%" }}>
+     
+      <input
+        type="number"
+        placeholder="Enter seconds"
+        onChange={(e) => setdata(e.target.value)}
+      />
       <button onClick={submitHandler}>submit</button>
-     <h1>Time left:{timer} secs</h1>
+      <h1>Time left:{timer} secs</h1>
     </div>
-  )
+  );
 }

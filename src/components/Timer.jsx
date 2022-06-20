@@ -28,7 +28,7 @@ export const Timer = () => {
 
   return (
     <div style={{display:"flex", flexDirection:"column",maxWidth:"70%"}}>
-      <input type="number" onChange={(e)=>(setdata(e.target.value))} />
+      <input type="number" placeholder='Enter seconds' onChange={(e)=>(setdata(e.target.value))} />
       <button onClick={submitHandler}>submit</button>
      <h1>Time left:{timer} secs</h1>
     </div>
